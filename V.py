@@ -1,32 +1,38 @@
-#coding=utf-8
-
-try:
-    if sys.argv[1]=='update':
-        system('cd $HOME && cd AKING && rm -f *')
-        system("curl -L https://raw.githubusercontent.com/AKING110/AKING/main/AKING.py -o AKING.py && python AKING.py")
-except:
-    pass
-if path.isfile("AKING.so"):
-    pass
-else:
-    system("curl -L https://raw.githubusercontent.com/AKING110/Data/main/dz.so -o dz.so")
-system('clear')
-print('\n\n\033[1;37m[•] This tools only for 64bit device ')
-print('\n[1] Start Cloning V1.3.9 \n[2] Start Random Cloning V1.3.8 (Updated)\n[3] Check Update \n')
-xd=input('[•] choose: ')
-if xd in ['1','01']:
-    if path.isfile('Gml.so'):
-        import AKING
-    else:
-        system("curl -L https://raw.githubusercontent.com/AKING110/Data/main/AKING.so -o AKING.so")
-        import AKING
-elif xd in ['2','02']:
-    if path.isfile('Gml.so'):
-        import Pubilc
-    else:
-        system("curl -L https://raw.githubusercontent.com/AKING110/Data/main/Random.so -o Random.so")
-        import Pubilc
-else:
-        print('\n[•] Checking updates...')
-        system('python Jan.py update')
+import os,time,platform
+print('\n\x1b[1;37m[•] Checking Update...');time.sleep(0.5)
+os.system('git pull')
+os.system('xdg-open https://www.facebook.com/groups/351076900316263/permalink/374959374594682/')
+logo = ("""\033[1;37m    ###    ##    ## #### ##    ##  ######  ❤
+   ## ##   ##   ##   ##  ###   ## ##    ##
+  ##   ##  ##  ##    ##  ####  ## ##
+ ##     ## #####     ##  ## ## ## ##   ####
+ ######### ##  ##    ##  ##  #### ##    ##
+ ##     ## ##   ##   ##  ##   ### ##    ##
+ ##     ## ##    ## #### ##    ##  ######  ❤
+(!)══════════════════════════════════════════
+(!) Author   : IMTIAZ AKING
+(!) Guthub   : AKING110
+(!) Facebook : MR.AKING.07
+(!) Type     : PAID
+(!) Version  : 1.2.2
+\033[1;37m(!)══════════════════════════════════════════""")
+ 
+def Run():
+	bit = platform.architecture()[0]
+	os.system('clear')
+	print(logo)
+	print('[•] Choose Your Country For Cloning\n\033[1;37m(!)══════════════════════════════════════════')
+	print('[1] Pak Cloning \n[2] BD Cloning\n[0] Exit')
+	Aking = input('[•] Choose : ')
+	if Aking =='1':
+		if bit =='32bit':
+			import AKING
+		elif bit =='64bit':
+			import sallu
+	elif Aking =='2':
+		if bit =='32bit':
+			import AKING
+		elif bit =='64bit':
+			import Gml
+Run()
  
